@@ -1,18 +1,29 @@
-<p>producto works!</p>
 
+<ng-container *ngIf="open.editar"><app-actualizar [id]='id' (noModal)="cerrarModal($event, 'editar')"></app-actualizar></ng-container>
+<ng-container *ngIf="open.eliminar"><app-eliminar [id]='id' (noModal)="cerrarModal($event, 'eliminar')"></app-eliminar></ng-container>
+<ng-container *ngIf="open.agregar"><app-crear [id]='id' (noModal)="cerrarModal($event, 'agregar')"></app-crear></ng-container>
 
 <div ngClass="grid">
    
     <ng-container *ngIf="elementos.length > 0 ; else vacio" >
-        <app-lista *ngFor="let p of elementos">
-            <div titulo>{{ p.title }}</div>
-            <div descripcion>{{ p.description }}</div>
-            <div precio>{{ p.price }}</div>
-            <div img><img [ngSrc]="p.images[0]" width="500" height="500"  /> </div>
-        </app-lista>
+        <div ngClass="colum">
+            <app-lista [id]="p.id" (onModal)="onModal($event)" ngClass="div4" *ngFor="let p of elementos">
+                <div titulo>{{ p.title }}</div>
+                <div descripcion>{{ p.description }}</div>
+                <div precio>{{ p.price | currency}}</div>
+                <div img><div [ngStyle]="{'background': 'url('+ p.images[0] +')' , 'height': '15em', 'background-size': '100% 100%'}"></div>
+                <!--    <img  ngClass="w100"  
+                          [ngSrc]="p.images[0]" 
+                          width="500" 
+                          height="500"  />
+                          -->
+                </div>
+            </app-lista>
+        </div>
     </ng-container>
 
     <ng-template #vacio>esta vacio</ng-template>
-</div>
 
 
+
+</div> 

@@ -1,7 +1,19 @@
-<p>lista works!</p>
-<div>
-    <ng-content select="[img]" ></ng-content>
-    <ng-content select="[titulo]"></ng-content>
-    <ng-content select="[descripcion]"></ng-content>
-    <ng-content select="[precio]"></ng-content>
+
+<div ngClass="card">
+    <div ngClass="cardHeader">
+        <ng-content select="[img]" ></ng-content>
+    </div>
+    <div ngClass="cardBody">
+        <h3><ng-content select="[titulo]"></ng-content></h3>
+        <div ngClass='descripcion'>
+            <p><ng-content select="[descripcion]"></ng-content></p>
+            <span><ng-content select="[precio]"></ng-content></span>
+        </div>
+    </div>
+    <div ngClass='action'>
+        <i (click)="activeModal('editar')" >editar</i>
+        <i (click)="activeModal('eliminar')">eliminar</i>
+    </div>
+    
 </div>
+

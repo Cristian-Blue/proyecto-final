@@ -1,0 +1,28 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #de382f;
+    background: linear-gradient(to left, #de382f 50%, white 50%) right;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+    background-size: 200%;
+    transition: all 0.5s ease-out;
+    z-index: 1;
+    .container{
+        padding-left: 2em !important;
+        margin: 0 auto;
+        display: flex;
+        position: relative;
+        min-height: 3.5em;
+        div{
+            position: absolute;
+            background-color: white;
+            padding: 0.5em 1.5em;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+
+            img{
+                width: 15em;
+            }
+        }
+    }
+}

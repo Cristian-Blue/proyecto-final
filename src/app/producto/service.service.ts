@@ -17,7 +17,7 @@ export class ServiceService {
     return this.http.get(this.baseUrl)
   }
 
-  getOne(id : string){
+  getOne(id : number){
     return this.http.get(`${this.baseUrl}/${id}`)
   }
 

@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment';
 import { TokenInterface } from './../interface/token-interface';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -10,7 +11,7 @@ export class AuthService {
 
   constructor(private http  : HttpClient) { }
 
-  baseUrl = "http://127.0.0.1:3100/auth";
+  baseUrl = `${environment.api}/auth/login`;
 
   getToken (informacion : AuthInterface | any ) {
     return this.http.post<TokenInterface>(`${this.baseUrl}`, informacion);

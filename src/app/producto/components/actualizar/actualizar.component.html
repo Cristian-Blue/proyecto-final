@@ -1,1 +1,10 @@
-<p>actualizar works!</p>
+
+<div (click)="cerrar()" ngClass='modal'>
+    <div>
+        <div ngClass='cardModal'>
+            <h3>{{ producto.title }}</h3>
+            <p>{{ producto.description}}</p>
+            <button type="button" (click)="cerrar()">cerrar</button>
+        </div>
+    </div>
+</div>
