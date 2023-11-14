@@ -1,10 +1,43 @@
+<div ngClass='modal'>
+    <div ngClass='cardModal'>
 
-<div (click)="cerrar()" ngClass='modal'>
-    <div>
-        <div ngClass='cardModal'>
-            <h3>{{ producto.title }}</h3>
-            <p>{{ producto.description}}</p>
-            <button type="button" (click)="cerrar()">cerrar</button>
-        </div>
+        <form [formGroup]="form" (submit)="enviar()">
+            <div ngClass='flex'>
+                <div ngClass="group div6">
+                    <input type="text" name="title" id="title" formControlName="title" required /> 
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Titulo</label>
+                </div>
+                <div ngClass="group div6">
+                    <input type="number" name="price" id="price" formControlName="price" required /> 
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Precio</label>
+                </div>
+            </div>
+            <div ngClass="group">
+                <input name="description" id="description" type="text" formControlName="description" required /> 
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Descripcion</label>
+            </div>
+            <div ngClass="group">
+                <input name="images" id="images" type="text" formControlName="images" required /> 
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Url de imagen</label>
+            </div>
+            <div ngClass='flex'>
+                <div [ngStyle]="{flex: 1}">
+                    <button ngClass='btn' type="submit">enviar</button>
+                </div>
+                <div>
+                    <button ngClass='btn' type="button" (click)="cerrar()">cerrar</button>
+                </div>
+            </div>
+
+        </form> 
     </div>
+    <div (click)="cerrar()" type='button' ngClass='modalClose'></div>
 </div>

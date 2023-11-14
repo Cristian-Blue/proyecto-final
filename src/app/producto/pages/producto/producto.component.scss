@@ -1,0 +1,15 @@
+.float{
+    position: fixed;
+    bottom: 2em;
+    right: 1em; 
+    cursor: pointer;
+    transition: linear all 0.2s;
+    &:hover{
+        opacity: 0.8;
+        transition: linear all 0.2s;
+    }
+    img{
+        width: 3em;
+        height: 3em;
+    }
+}

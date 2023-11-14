@@ -1,0 +1,82 @@
+form{
+  margin-top: 4em;
+}
+.minHeight {
+  min-height: 78.4vh;
+
+  &:before {
+    z-index: -1;
+    content: "";
+    place-items: center;
+    background-image: url(https://i.pinimg.com/originals/fa/c0/5c/fac05c110c458e9bab3a3248bfb3c376.jpg), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.25;
+    z-index: -1;
+  }
+}
+
+img {
+  width: 4em;
+  height: 4em;
+  position: absolute;
+  top: 2.5em;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: white;
+  padding: 0.3em;
+  border-radius: 100%;
+}
+
+$bg-color: #333;
+$hl-color: #6d6d6d;
+$muted-color: mix(white, $bg-color, 70%);
+$trans-time: 300ms;
+$width: 100%;
+
+.cardLogin {
+  position: absolute;
+  left: 0;
+  background-color: white;
+  right: 0;
+  margin: 0 auto;
+  top: 20vh;
+  padding: 2em;
+  padding-top: 5em;
+  border: 1px solid #d2d2d2;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+
+  .cardHeader {
+    position: relative;
+
+    div {
+      .divCardHeader {
+        position: absolute;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        top: -5em;
+        left: -2em;
+        background-color: #d24839;
+        height: 5em;
+        width: 100%;
+        padding-right: 2em;
+        padding-left: 2em;
+        border-bottom: 1px solid #d2d2d2;
+      }
+    }
+  }
+}
+

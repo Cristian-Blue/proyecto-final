@@ -9,6 +9,7 @@ import { Component, EventEmitter, Input, OnChanges, Output } from '@angular/core
 })
 export class EliminarComponent {
   elemento ?: ProductoInterface ;
+  constructor(private sp : ServiceService){}
 
   @Input() id : number = 0 ;
   producto : ProductoInterface = {
@@ -24,4 +25,10 @@ export class EliminarComponent {
     this.noModal.emit(false);
   }
 
+  ngOnChanges(){ 
+    this.sp.getOne(this.id).subscribe((res : any)=>{
+      this.producto = res;
+    })
+
+  }
 }

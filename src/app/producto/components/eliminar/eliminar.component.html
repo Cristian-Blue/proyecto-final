@@ -1,2 +1,15 @@
-<p>eliminar works!</p>
-<button type="button" (click)="cerrar()">cerrar</button>
+<div ngClass='modal'>
+    <div ngClass='cardModal'>
+        <h3>¿Esta seguro que desea eliminar el registro?</h3>
+        <h2>{{ producto.title }}</h2>
+        <div ngClass='flex'>
+            <div [ngStyle]="{flex: 1}">
+                <button ngClass='btn' type="submit">Eliminar</button>
+            </div>
+            <div>
+                <button ngClass='btn' type="button" (click)="cerrar()">cerrar</button>
+            </div>
+        </div>
+    </div>
+    <div (click)="cerrar()" type='button' ngClass='modalClose'></div>
+</div>

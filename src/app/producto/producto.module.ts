@@ -1,3 +1,4 @@
+import { ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 
@@ -19,7 +20,8 @@ import { EliminarComponent } from './components/eliminar/eliminar.component';
   imports: [
     CommonModule,
     ProductoRoutingModule,
-    NgOptimizedImage
+    NgOptimizedImage,
+    ReactiveFormsModule
   ]
 })
 export class ProductoModule { }

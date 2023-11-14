@@ -1,11 +1,26 @@
-<form [formGroup]="form" (submit)="enviar()">
-    <div ngClass="group-input">
-        <label>Usuario</label>
-        <input name="email" id="usuario" formControlName="email" /> 
+<div ngClass="minHeight">
+    <div ngClass="cardLogin div4">
+        <div ngClass="cardHeader ">
+            <div ngClass='temp'>
+                <div ngClass='divCardHeader'>
+                    <img src="assets/user.png" width="15" height="15" /> 
+                </div>
+            </div>
+        </div>
+        <form [formGroup]="form" (submit)="enviar()">
+            <div ngClass="group">
+                <input type="text" name="email" id="usuario" formControlName="email" required /> 
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Usuario</label>
+            </div>
+            <div ngClass="group">
+                <input name="password" id="password" type="password" formControlName="password" required /> 
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Contraseña</label>
+            </div>
+            <button ngClass='btn' type="submit">enviar</button>
+        </form>
     </div>
-    <div ngClass="group-input">
-        <label>Contraseña</label>
-        <input name="password" id="password" type="password" formControlName="password" /> 
-    </div>
-    <button type="submit">enviar</button>
-</form>
+</div>
